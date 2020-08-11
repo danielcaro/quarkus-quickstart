@@ -43,7 +43,7 @@ class CoffeeResourceTest {
         given().contentType("application/json").body(MakeCoffeeOrderRequest("Jon Doe", CoffeeType.MACCHIATO))
                 .`when`().post("/coffees")
                 .then()
-                .statusCode(Response.Status.FORBIDDEN.statusCode)
+                .statusCode(Response.Status.NOT_FOUND.statusCode)
     }
 
 }
