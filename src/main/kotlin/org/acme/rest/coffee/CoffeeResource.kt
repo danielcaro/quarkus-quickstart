@@ -22,4 +22,5 @@ class CoffeeResource(
     fun stream(request: MakeCoffeeOrderRequest): CoffeeOrder {
         return makeMeACoffeeInteractor.execute(request).blockingGet()
     }
+
 }

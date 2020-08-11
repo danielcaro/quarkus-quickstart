@@ -12,7 +12,7 @@ class PriceConverter {
     @Outgoing("my-data-stream")
     @Broadcast
     fun process(priceInUsd: Int): Double {
-        return priceInUsd *  0.01
+        return priceInUsd * 10.0
     }
 
 }

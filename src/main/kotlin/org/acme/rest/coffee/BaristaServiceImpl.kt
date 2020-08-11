@@ -21,4 +21,12 @@ class BaristaServiceImpl : BaristaService {
         baristasOnMemory.add(barista)
         return Maybe.just(barista)
     }
+
+    override fun dropAll() {
+        baristasOnMemory.clear()
+    }
+
+    override fun findAll(): Maybe<List<Barista>> {
+        return baristasOnMemory.let { Maybe.just(it) }
+    }
 }
