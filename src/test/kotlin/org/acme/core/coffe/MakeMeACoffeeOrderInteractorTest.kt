@@ -4,15 +4,12 @@ import com.nhaarman.mockito_kotlin.*
 import io.reactivex.Maybe
 import io.reactivex.observers.TestObserver
 import org.acme.core.cofffe.*
-import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Tag
-import org.junit.jupiter.api.Test
 import java.util.*
 
-@Tag("MakeCoffe")
+@DisplayName("Make Me a Coffe Interactor")
 class MakeMeACoffeeOrderInteractorTest {
     val baristaService: BaristaService = mock()
     val priceService: PriceService = mock()
@@ -49,7 +46,7 @@ class MakeMeACoffeeOrderInteractorTest {
         testObserver.values().firstOrNull()?.let {
             assertEquals(CoffeeType.ESPRESSO, it.type)
             assertNotNull(it.barista)
-            assertEquals(1.0F, it.price)
+            assertEquals(0.0F, it.price)
         }
 
 

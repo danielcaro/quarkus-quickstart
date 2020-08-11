@@ -3,6 +3,8 @@ package org.acme.rest
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager
 import io.smallrye.reactive.messaging.connectors.InMemoryConnector
 
+// https://github.com/quarkusio/quarkus-quickstarts/tree/master/kafka-quickstart
+// https://github.com/quarkusio/quarkus/issues/6427
 class KafkaResource : QuarkusTestResourceLifecycleManager {
 
     override fun start(): Map<String, String> {

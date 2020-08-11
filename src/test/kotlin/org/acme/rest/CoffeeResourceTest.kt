@@ -6,6 +6,7 @@ import io.restassured.RestAssured.given
 import org.acme.core.cofffe.*
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import java.util.*
@@ -15,6 +16,7 @@ import javax.ws.rs.core.Response
 @QuarkusTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @QuarkusTestResource(KafkaResource::class)
+@DisplayName("Coffe Endpoint Test")
 class CoffeeResourceTest {
 
     val baristaJuanValdez = Barista(id = UUID.randomUUID(), name = "Juan Valdez", specialities = listOf(CoffeeType.ESPRESSO))
@@ -36,7 +38,7 @@ class CoffeeResourceTest {
                 .then().statusCode(Response.Status.OK.statusCode).extract().`as`(CoffeeOrder::class.java)
                 .let {
                     assertEquals(it.type, CoffeeType.ESPRESSO)
-                    assertEquals(it.price, 1.0F)
+                    assertEquals(it.price, 0.0F)
                 }
     }
 
