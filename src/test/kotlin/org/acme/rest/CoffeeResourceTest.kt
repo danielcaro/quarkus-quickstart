@@ -1,5 +1,6 @@
 package org.acme.rest
 
+import io.quarkus.test.common.QuarkusTestResource
 import io.quarkus.test.junit.QuarkusTest
 import io.restassured.RestAssured.given
 import org.acme.core.cofffe.*
@@ -13,6 +14,7 @@ import javax.ws.rs.core.Response
 
 @QuarkusTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@QuarkusTestResource(KafkaResource::class)
 class CoffeeResourceTest {
 
     val baristaJuanValdez = Barista(id = UUID.randomUUID(), name = "Juan Valdez", specialities = listOf(CoffeeType.ESPRESSO))

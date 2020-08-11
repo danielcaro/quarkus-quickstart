@@ -20,6 +20,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation 'io.smallrye.reactive:mutiny-rxjava:0.7.0'
 
+    testImplementation 'io.smallrye.reactive:smallrye-reactive-messaging-in-memory:2.2.1'
     testImplementation 'io.quarkus:quarkus-junit5:1.7.0.Final'
     testImplementation 'io.quarkus:quarkus-junit5-mockito:1.7.0.Final'
     testImplementation 'io.rest-assured:kotlin-extensions:4.3.1'
