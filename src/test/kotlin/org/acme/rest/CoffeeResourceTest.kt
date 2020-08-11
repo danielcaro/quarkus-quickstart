@@ -3,10 +3,8 @@ package org.acme.rest
 import io.quarkus.test.junit.QuarkusTest
 import io.restassured.RestAssured.given
 import org.acme.core.cofffe.*
-import org.apache.http.HttpStatus
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import java.util.*
