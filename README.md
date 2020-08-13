@@ -1,5 +1,7 @@
 # quarkus + kotlin + kafka + gradle quickstart project
 
+[![codebeat badge](https://codebeat.co/badges/86c9b062-3017-4ff2-b2f3-d3962e5a296b)](https://codebeat.co/projects/github-com-danielcaro-quarkus-quickstart-master)
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
