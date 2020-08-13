@@ -1,4 +1,4 @@
-# quarkus-quickstart project
+# quarkus + kotlin + kafka + gradle quickstart project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
